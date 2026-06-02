@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CleverTender – KI-Co-Pilot für Gebäudereinigungs-Vergaben</title>
-  <meta name="description" content="Vergabeunterlagen in Minuten verstehen, sicher kalkulieren, Pflicht-Patzer vermeiden — die KI-Plattform für den deutschen Gebäudereinigungs-Mittelstand. Tarif TV-Gebäudereinigung 2026 integriert." />
+  <meta name="description" content="Vergabeunterlagen in Minuten verstehen, sicher kalkulieren, Pflicht-Patzer vermeiden. Die KI-Plattform für den deutschen Gebäudereinigungs-Mittelstand. Tarif TV-Gebäudereinigung 2026 integriert." />
 
   <!-- Google Fonts: Inter, Source Serif 4, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -387,7 +387,7 @@
       flex-shrink: 0;
     }
 
-    /* Animation pro Stage — wechselt Pending → Done bei eigenem Delay */
+    /* Animation pro Stage. Wechselt Pending zu Done bei eigenem Delay. */
     .stage-anim {
       opacity: 0.55;
       animation: stage-to-done 0.45s ease var(--d, 0s) forwards;
@@ -858,6 +858,18 @@
     }
     .demo-dialog-actions { display: flex; gap: 0.6rem; }
     .demo-dialog-actions .btn { flex: 1; justify-content: center; }
+    .demo-dialog-privacy {
+      margin: 0.95rem 0 0;
+      font-size: 0.78rem;
+      color: var(--muted-foreground);
+      text-align: center;
+      line-height: 1.5;
+    }
+    .demo-dialog-privacy a {
+      color: var(--muted-foreground);
+      text-decoration: underline;
+    }
+    .demo-dialog-privacy a:hover { color: var(--primary); }
 
     /* ============================================================
        Animations
@@ -919,7 +931,7 @@
           <h1>Vergabeunterlagen verstehen. Angebote sicher rechnen. Aufträge gewinnen.</h1>
           <p style="font-size:1.1rem; max-width:540px;">
             Die KI-Plattform für den deutschen Gebäudereinigungs-Mittelstand.
-            Lade dein komplettes Vergabe-Bundle hoch — CleverTender erkennt jede
+            Lade dein komplettes Vergabe-Bundle hoch. CleverTender erkennt jede
             Datei, extrahiert Fristen, Pflicht-Nachweise und Raumdaten, und rechnet
             dein Angebot mit dir live. Du behältst die Kontrolle, die KI macht
             die Fleißarbeit.
@@ -1010,7 +1022,7 @@
         <div class="section-head reveal">
           <span class="eyebrow">Das Problem</span>
           <h2>Vergaben lesen, prüfen, rechnen frisst Wochenenden.</h2>
-          <p>Eine Vergabeunterlage sind 80+ Seiten PDF, dazu Excel-Aufmaß und Word-Formulare. Wer dort einen Pflicht-Nachweis übersieht oder eine Tariftreue-Klausel überliest, verliert den Auftrag — oder kassiert Pönalen.</p>
+          <p>Eine Vergabeunterlage sind 80+ Seiten PDF, dazu Excel-Aufmaß und Word-Formulare. Wer dort einen Pflicht-Nachweis übersieht oder eine Tariftreue-Klausel überliest, verliert den Auftrag oder kassiert Pönalen.</p>
         </div>
 
         <div class="problem-grid">
@@ -1020,7 +1032,7 @@
             <ul>
               <li><span class="bullet">!</span> Vergabebundle ist ein Mix aus PDF, Excel-Aufmaß, Word-Formularen und GAEB-XML.</li>
               <li><span class="bullet">!</span> Pflicht-Nachweise versteckt in BVB, AVB und Eignungs-Anlagen.</li>
-              <li><span class="bullet">!</span> Kalkulation per Excel-Bauchgefühl — Tarif, Stunden, EP nicht nachvollziehbar.</li>
+              <li><span class="bullet">!</span> Kalkulation per Excel-Bauchgefühl. Tarif, Stunden, EP sind nicht nachvollziehbar.</li>
               <li><span class="bullet">!</span> Risiko-Klauseln (Tariftreue, Schadensersatz, Sub-Verbot) werden überlesen.</li>
             </ul>
           </div>
@@ -1029,10 +1041,10 @@
             <span class="tag">Mit CleverTender</span>
             <h3>KI liest, prüft und rechnet mit</h3>
             <ul>
-              <li><span class="bullet">✓</span> Jedes Format erkannt: PDF, Excel, Word, GAEB-X83 — alles in einem Upload.</li>
+              <li><span class="bullet">✓</span> Jedes Format erkannt: PDF, Excel, Word, GAEB-X83, alles in einem Upload.</li>
               <li><span class="bullet">✓</span> Pflicht-Checkliste mit Quellen-Zitat aus der Original-Datei.</li>
               <li><span class="bullet">✓</span> 3-Layer Kalkulator: Räume → Stunden → Lohn → Angebot, jeder Wert editierbar.</li>
-              <li><span class="bullet">✓</span> KI Co-Pilot beantwortet Fragen aus dem Bundle — mit Seitenangabe.</li>
+              <li><span class="bullet">✓</span> KI Co-Pilot beantwortet Fragen aus dem Bundle, mit Seitenangabe.</li>
             </ul>
           </div>
         </div>
@@ -1045,7 +1057,7 @@
         <div class="section-head reveal">
           <span class="eyebrow">Funktionen</span>
           <h2>Alles, was du für ein sicheres Angebot brauchst.</h2>
-          <p>Vom Bundle-Upload bis zur Angebotsabgabe — CleverTender deckt den Vergabe-Workflow eines Gebäudereinigers Ende-zu-Ende ab.</p>
+          <p>Vom Bundle-Upload bis zur Angebotsabgabe. CleverTender deckt den Vergabe-Workflow eines Gebäudereinigers Ende-zu-Ende ab.</p>
         </div>
 
         <div class="features-grid">
@@ -1070,7 +1082,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h5M8 18h3"/></svg>
             </div>
             <h3>3-Layer Kalkulator</h3>
-            <p>Räume → Stunden → Lohn → Angebot. Tarif TV-Gebäudereinigung 2026, BIV-Leistungswerte und Aufschläge transparent — jede Zahl editierbar.</p>
+            <p>Räume → Stunden → Lohn → Angebot. Tarif TV-Gebäudereinigung 2026, BIV-Leistungswerte und Aufschläge transparent. Jede Zahl editierbar.</p>
           </article>
 
         </div>
@@ -1089,22 +1101,22 @@
           <div class="step reveal">
             <span class="step-num mono">01 / Hochladen</span>
             <h3>Bundle reinziehen</h3>
-            <p>PDFs, Excel-Aufmaß, Word-Formulare — alles auf einmal. CleverTender erkennt jedes Format automatisch.</p>
+            <p>PDFs, Excel-Aufmaß, Word-Formulare, alles auf einmal. CleverTender erkennt jedes Format automatisch.</p>
           </div>
           <div class="step reveal">
             <span class="step-num mono">02 / Analyse</span>
             <h3>KI liest die Vergabe</h3>
-            <p>Bundle gescannt, Kennzahlen extrahiert, Pflicht-Checkliste erstellt, Räume aus Aufmaß gelesen, Risiken markiert — in ~90 Sekunden.</p>
+            <p>Bundle gescannt, Kennzahlen extrahiert, Pflicht-Checkliste erstellt, Räume aus Aufmaß gelesen, Risiken markiert. Alles in rund 90 Sekunden.</p>
           </div>
           <div class="step reveal">
             <span class="step-num mono">03 / Kalkulieren</span>
             <h3>Mit Co-Pilot rechnen</h3>
-            <p>3-Layer Tabelle live editieren. Co-Pilot beantwortet Fragen aus dem Bundle und ändert Werte auf Zuruf — du bestätigst.</p>
+            <p>3-Layer Tabelle live editieren. Co-Pilot beantwortet Fragen aus dem Bundle und ändert Werte auf Zuruf. Du bestätigst.</p>
           </div>
           <div class="step reveal">
             <span class="step-num mono">04 / Abgeben</span>
             <h3>Angebot exportieren</h3>
-            <p>Kalkulation als PDF/Excel, Pflicht-Checkliste abgehakt, Fristen im Blick — fertig zur Einreichung.</p>
+            <p>Kalkulation als PDF/Excel, Pflicht-Checkliste abgehakt, Fristen im Blick. Fertig zur Einreichung.</p>
           </div>
         </div>
       </div>
@@ -1169,7 +1181,7 @@
         <div id="demo" class="cta-banner reveal">
           <div>
             <h3>Bereit, die nächste Vergabe nicht zu verlieren?</h3>
-            <p>Buche eine 20-minütige Demo — wir analysieren live ein echtes Bundle deiner Wahl.</p>
+            <p>Buche eine 20-minütige Demo. Wir analysieren live ein echtes Bundle deiner Wahl.</p>
           </div>
           <a href="#demo" class="btn btn-primary">Demo anfragen</a>
         </div>
@@ -1222,7 +1234,7 @@
       <span class="eyebrow">Demo anfragen</span>
       <h3 id="demo-dialog-title">Schreib direkt an Luca</h3>
       <p class="lede">
-        Buche eine 20-minütige Demo — wir analysieren live ein echtes Bundle deiner Wahl.
+        Buche eine 20-minütige Demo. Wir analysieren live ein echtes Bundle deiner Wahl.
       </p>
 
       <div class="contact-card">
@@ -1248,7 +1260,7 @@
 
 ich habe eure Website gesehen und würde mir CleverTender gerne live anschauen.
 
-Unser Reinigungsbetrieb hat aktuell ein paar offene Vergaben — wann hättet ihr Zeit für eine 20-Minuten-Demo?
+Unser Reinigungsbetrieb hat aktuell ein paar offene Vergaben. Wann hättet ihr Zeit für eine 20-Minuten-Demo?
 
 Viele Grüße
 [Dein Name]">
@@ -1259,7 +1271,7 @@ Viele Grüße
 
 ich habe eure Website gesehen und würde mir CleverTender gerne live anschauen.
 
-Unser Reinigungsbetrieb hat aktuell ein paar offene Vergaben — wann hättet ihr Zeit für eine 20-Minuten-Demo?
+Unser Reinigungsbetrieb hat aktuell ein paar offene Vergaben. Wann hättet ihr Zeit für eine 20-Minuten-Demo?
 
 Viele Grüße
 [Dein Name]</pre>
@@ -1268,6 +1280,11 @@ Viele Grüße
       <div class="demo-dialog-actions">
         <a href="mailto:l.jakob@startmunich.de?subject=CleverTender%20Demo-Anfrage" class="btn btn-primary">E-Mail öffnen</a>
       </div>
+
+      <p class="demo-dialog-privacy">
+        Mit Klick auf „E-Mail öffnen" akzeptierst du unsere
+        <a href="datenschutz.html">Datenschutzerklärung</a>.
+      </p>
     </div>
   </dialog>
 
@@ -1326,7 +1343,7 @@ Viele Grüße
         if (e.target === dialog) dialog.close();
       });
 
-      // Copy buttons (email + Beispiel-Nachricht) — any element with [data-copy]
+      // Copy buttons (email + Beispiel-Nachricht), any element with [data-copy]
       dialog.querySelectorAll('[data-copy]').forEach((btn) => {
         btn.addEventListener('click', async (e) => {
           e.preventDefault();
