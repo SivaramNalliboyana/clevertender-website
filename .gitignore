@@ -1,0 +1,15 @@
+# Pitch / internal materials (Slides, Team-Fotos, PPTX)
+Sprint/
+
+# OS-Junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office-Lock-Files
+~$*
+
+# Editor
+.vscode/
+.idea/
+*.swp
