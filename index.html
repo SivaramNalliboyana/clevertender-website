@@ -517,6 +517,7 @@
       width: max-content;
       animation: partners-drift 3.5s ease-in-out infinite alternate;
     }
+    .partners-track .partners-track-dup { display: none; }
     .partners-marquee:hover .partners-track { animation-play-state: paused; }
     .partner-item {
       display: inline-flex;
@@ -534,6 +535,25 @@
     @keyframes partners-drift {
       from { transform: translateX(-18px); }
       to   { transform: translateX(18px); }
+    }
+    @media (max-width: 800px) {
+      .partners-marquee {
+        justify-content: flex-start;
+        -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+                mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+      }
+      .partners-track {
+        gap: 2.5rem;
+        padding-right: 2.5rem;
+        animation: partners-scroll 22s linear infinite;
+      }
+      .partners-track .partners-track-dup { display: inline-flex; gap: 2.5rem; padding-right: 2.5rem; align-items: center; }
+      .partner-logo { height: 44px; }
+      .partner-logo--sm { height: 36px; }
+    }
+    @keyframes partners-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
     }
     @media (prefers-reduced-motion: reduce) {
       .partners-track { animation: none; }
@@ -1160,6 +1180,26 @@
             </span>
             <span class="partner-item">
               <img src="partner-lmu.png" alt="Ludwig-Maximilians-Universität München" class="partner-logo partner-logo--sm" loading="lazy" />
+            </span>
+            <span class="partners-track-dup" aria-hidden="true">
+              <span class="partner-item">
+                <img src="partner-arche-reinigung-bayern.webp" alt="" class="partner-logo" loading="lazy" />
+              </span>
+              <span class="partner-item">
+                <img src="partner-start-munich.png" alt="" class="partner-logo" loading="lazy" />
+              </span>
+              <span class="partner-item">
+                <img src="partner-toma.jpg" alt="" class="partner-logo" loading="lazy" />
+              </span>
+              <span class="partner-item">
+                <img src="partner-isarlens.jpeg" alt="" class="partner-logo" loading="lazy" />
+              </span>
+              <span class="partner-item">
+                <img src="partner-tum.png" alt="" class="partner-logo" loading="lazy" />
+              </span>
+              <span class="partner-item">
+                <img src="partner-lmu.png" alt="" class="partner-logo partner-logo--sm" loading="lazy" />
+              </span>
             </span>
           </div>
         </div>
