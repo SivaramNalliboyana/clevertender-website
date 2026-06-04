@@ -427,6 +427,62 @@
     .section-head p { font-size: 1.05rem; }
 
     /* ============================================================
+       Partners
+       ============================================================ */
+    .partners {
+      padding: 3rem 0 3.25rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--background);
+    }
+    .partners-eyebrow {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted-foreground);
+      margin: 0 0 1.5rem;
+    }
+    .partners-marquee {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .partners-track {
+      display: inline-flex;
+      align-items: center;
+      gap: 4rem;
+      width: max-content;
+      animation: partners-drift 3.5s ease-in-out infinite alternate;
+    }
+    .partners-marquee:hover .partners-track { animation-play-state: paused; }
+    .partner-link {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+      line-height: 0;
+      opacity: 0.9;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .partner-link:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .partner-logo {
+      height: 56px;
+      width: auto;
+      display: block;
+    }
+    @keyframes partners-drift {
+      from { transform: translateX(-18px); }
+      to   { transform: translateX(18px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .partners-track { animation: none; }
+    }
+
+    /* ============================================================
        Problem / Lösung
        ============================================================ */
     .problem-grid {
@@ -1019,6 +1075,23 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Partners ============================ -->
+    <section class="partners" aria-label="Unsere Partner">
+      <div class="container">
+        <p class="partners-eyebrow">Unsere Partner</p>
+        <div class="partners-marquee" role="presentation">
+          <div class="partners-track">
+            <a href="https://www.arche-reinigung.de/" class="partner-link" target="_blank" rel="noopener noreferrer" aria-label="Arche Reinigung Bayern (öffnet in neuem Tab)">
+              <img src="partner-arche-reinigung-bayern.webp" alt="Arche Reinigung Bayern" class="partner-logo" loading="lazy" />
+            </a>
+            <a href="https://www.startmunich.de/" class="partner-link" target="_blank" rel="noopener noreferrer" aria-label="START Munich (öffnet in neuem Tab)">
+              <img src="partner-start-munich.png" alt="START Munich" class="partner-logo" loading="lazy" />
+            </a>
           </div>
         </div>
       </div>
