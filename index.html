@@ -427,6 +427,68 @@
     .section-head p { font-size: 1.05rem; }
 
     /* ============================================================
+       Strategic partner spotlight (ARB)
+       ============================================================ */
+    .partner-spotlight {
+      padding: 5rem 0;
+      background: var(--background);
+    }
+    .partner-spotlight-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+      gap: 3rem;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) * 2);
+      padding: 3rem;
+      box-shadow: 0 20px 60px -30px color-mix(in srgb, var(--chart-5) 22%, transparent);
+      color: inherit;
+      text-decoration: none;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .partner-spotlight-card:hover {
+      text-decoration: none;
+      transform: translateY(-3px);
+      border-color: color-mix(in srgb, var(--primary) 40%, var(--border));
+      box-shadow: 0 24px 70px -28px color-mix(in srgb, var(--chart-5) 32%, transparent);
+    }
+    .partner-spotlight-card:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 4px;
+    }
+    .partner-spotlight-logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+    }
+    .partner-spotlight-logo {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display: block;
+    }
+    .partner-spotlight-text .eyebrow { margin-bottom: 1rem; }
+    .partner-spotlight-text h2 {
+      margin-bottom: 1.25rem;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+    .partner-spotlight-text p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .partner-spotlight-text p + p { margin-top: 0.75rem; }
+    @media (max-width: 800px) {
+      .partner-spotlight-card {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+      .partner-spotlight-logo-wrap { padding: 0.5rem; }
+    }
+
+    /* ============================================================
        Partners
        ============================================================ */
     .partners {
@@ -456,24 +518,19 @@
       animation: partners-drift 3.5s ease-in-out infinite alternate;
     }
     .partners-marquee:hover .partners-track { animation-play-state: paused; }
-    .partner-link {
+    .partner-item {
       display: inline-flex;
       align-items: center;
       flex-shrink: 0;
       line-height: 0;
       opacity: 0.9;
-      transition: opacity .2s ease, transform .2s ease;
-    }
-    .partner-link:hover {
-      opacity: 1;
-      transform: translateY(-2px);
-      text-decoration: none;
     }
     .partner-logo {
       height: 56px;
       width: auto;
       display: block;
     }
+    .partner-logo--sm { height: 44px; }
     @keyframes partners-drift {
       from { transform: translateX(-18px); }
       to   { transform: translateX(18px); }
@@ -1086,12 +1143,24 @@
         <p class="partners-eyebrow">Unsere Partner</p>
         <div class="partners-marquee" role="presentation">
           <div class="partners-track">
-            <a href="https://www.arche-reinigung.de/" class="partner-link" target="_blank" rel="noopener noreferrer" aria-label="Arche Reinigung Bayern (öffnet in neuem Tab)">
+            <span class="partner-item">
               <img src="partner-arche-reinigung-bayern.webp" alt="Arche Reinigung Bayern" class="partner-logo" loading="lazy" />
-            </a>
-            <a href="https://www.startmunich.de/" class="partner-link" target="_blank" rel="noopener noreferrer" aria-label="START Munich (öffnet in neuem Tab)">
+            </span>
+            <span class="partner-item">
               <img src="partner-start-munich.png" alt="START Munich" class="partner-logo" loading="lazy" />
-            </a>
+            </span>
+            <span class="partner-item">
+              <img src="partner-toma.jpg" alt="TOMA" class="partner-logo" loading="lazy" />
+            </span>
+            <span class="partner-item">
+              <img src="partner-isarlens.jpeg" alt="Isarlens" class="partner-logo" loading="lazy" />
+            </span>
+            <span class="partner-item">
+              <img src="partner-tum.png" alt="Technische Universität München" class="partner-logo" loading="lazy" />
+            </span>
+            <span class="partner-item">
+              <img src="partner-lmu.png" alt="Ludwig-Maximilians-Universität München" class="partner-logo partner-logo--sm" loading="lazy" />
+            </span>
           </div>
         </div>
       </div>
@@ -1265,6 +1334,26 @@
           </div>
           <a href="#demo" class="btn btn-primary">Demo anfragen</a>
         </div>
+      </div>
+    </section>
+    <!-- ============================ Strategic partner spotlight (ARB) ============================ -->
+    <section class="partner-spotlight" aria-labelledby="partner-spotlight-title">
+      <div class="container">
+        <a class="partner-spotlight-card reveal" href="https://www.arche-reinigung.de/" target="_blank" rel="noopener noreferrer" aria-label="Arche Reinigung Bayern besuchen (öffnet in neuem Tab)">
+          <div class="partner-spotlight-logo-wrap">
+            <img src="partner-arche-reinigung-bayern.webp" alt="Arche Reinigung Bayern" class="partner-spotlight-logo" />
+          </div>
+          <div class="partner-spotlight-text">
+            <span class="eyebrow">Strategischer Partner</span>
+            <h2 id="partner-spotlight-title">Gemeinsam für messbare Qualität und Effizienz</h2>
+            <p>
+              Unser strategischer Partner <strong>ARB, Arche Reinigung Bayern,</strong> unterstützt uns aktiv mit tiefem Markt- und Kalkulationswissen aus dem täglichen Vergabe-Geschäft. Jede Tarifregel, jeder Praxiskniff aus dem Alltag eines Gebäudereinigers fließt direkt in CleverTender ein.
+            </p>
+            <p>
+              Durch diese enge Verzahnung von moderner Gebäudereinigung und fortschrittlicher KI-Technologie revolutionieren wir den zeitintensiven Ausschreibungsprozess. Präzise Ergebnisse in Sekundenschnelle.
+            </p>
+          </div>
+        </a>
       </div>
     </section>
   </main>
