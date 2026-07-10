@@ -8,20 +8,20 @@
   <meta name="robots" content="index,follow" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
-  <meta name="theme-color" content="#FE7A21" />
+  <meta name="theme-color" content="#0A0A0A" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
       --background: #ffffff;
-      --foreground: #1a1a1a;
+      --foreground: #141414;
       --muted-foreground: #4b5563;
       --border: #e5e5e5;
-      --primary: #FE7A21;
+      --primary: #DD6B2F;
       --radius: 0.375rem;
       --font-sans: 'Inter', system-ui, sans-serif;
-      --font-serif: 'Source Serif 4', Georgia, serif;
+      --font-serif: 'Inter', system-ui, sans-serif;
       --font-mono: 'JetBrains Mono', ui-monospace, monospace;
     }
     * { box-sizing: border-box; }
@@ -38,7 +38,14 @@
       border-bottom: 1px solid var(--border);
       padding: 1rem 0;
     }
-    .brand-logo { height: 56px; width: auto; display: block; }
+    header.site-header a { text-decoration: none; }
+    .logo-badge {
+      display: inline-flex; align-items: center;
+      padding: 0.42rem 0.85rem; border-radius: 10px;
+      background: linear-gradient(115deg, #FFB68C 0%, #FFD9B4 32%, #FFC9BB 62%, #FFCC93 100%);
+      color: #141414; font-weight: 800; font-size: 1.02rem;
+      letter-spacing: -0.02em; line-height: 1; white-space: nowrap;
+    }
     main { padding: 3rem 0 4rem; }
     h1 {
       font-family: var(--font-serif);
@@ -105,7 +112,7 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" aria-label="CleverTender Startseite">
-        <img src="CleverTender_Logo-20260529.png" alt="CleverTender" class="brand-logo" />
+        <span class="logo-badge">CleverTender</span>
       </a>
     </div>
   </header>
@@ -396,7 +403,7 @@
       </ul>
       <p>
         Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt
-        haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur
+        haben, dürfen diese Daten (von ihrer Speicherung abgesehen) nur
         mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder
         Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer
         anderen natürlichen oder juristischen Person oder aus Gründen eines
@@ -438,7 +445,7 @@
         Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1
         lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse
         an der technisch fehlerfreien Darstellung und der Optimierung seiner
-        Website – hierzu müssen die Server-Log-Files erfasst werden.
+        Website. Hierzu müssen die Server-Log-Files erfasst werden.
       </p>
 
       <h3>Kontaktformular</h3>
@@ -460,7 +467,7 @@
         zur Löschung auffordern, Ihre Einwilligung zur Speicherung
         widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B.
         nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende
-        gesetzliche Bestimmungen – insbesondere Aufbewahrungsfristen –
+        gesetzliche Bestimmungen (insbesondere Aufbewahrungsfristen)
         bleiben unberührt.
       </p>
 
@@ -482,8 +489,8 @@
         übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung
         auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der
         Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener
-        Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen –
-        insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.
+        Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen
+        (insbesondere gesetzliche Aufbewahrungsfristen) bleiben unberührt.
       </p>
 
       <h2>5. Plugins und Tools</h2>
