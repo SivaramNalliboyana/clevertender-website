@@ -9,6 +9,10 @@
   <link rel="apple-touch-icon" href="favicon.png" />
   <meta name="theme-color" content="#0A0A0A" />
 
+  <!-- Redirect to new platform -->
+  <script>window.location.replace("https://www.silonio.com");</script>
+  <meta http-equiv="refresh" content="0;url=https://www.silonio.com" />
+
   <!-- Google Fonts: Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,11 +184,53 @@
     .btn-outline-dark:hover { background: rgba(255, 255, 255, 0.12); border-color: rgba(245, 245, 245, 0.3); }
 
     /* ============================================================
+       Migration Banner
+       ============================================================ */
+    .migration-banner {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 60;
+      background: var(--grad-brand);
+      color: var(--pine);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.55rem 1.25rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      flex-wrap: wrap;
+    }
+    .migration-banner strong { font-weight: 800; }
+    .migration-banner .banner-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--pine);
+      color: var(--on-dark);
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color .18s ease, transform .18s ease;
+    }
+    .migration-banner .banner-btn:hover {
+      background: var(--pine-soft);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .migration-banner { font-size: 0.8rem; gap: 0.65rem; }
+    }
+
+    /* ============================================================
        Header: schwebende Pill-Navigation
        ============================================================ */
     .site-header {
       position: fixed;
-      top: 14px;
+      top: calc(14px + 36px); /* offset below migration banner */
       left: 0; right: 0;
       z-index: 50;
       pointer-events: none;
@@ -235,7 +281,7 @@
         radial-gradient(90% 70% at 70% -10%, #2B2B2B 0%, transparent 60%),
         linear-gradient(180deg, var(--pine-deep) 0%, var(--pine) 90%);
       color: var(--on-dark);
-      padding: 9.5rem 0 7rem;
+      padding: 11rem 0 7rem; /* extra top to clear banner + nav */
       overflow: hidden;
     }
     .hero::before {
@@ -447,7 +493,7 @@
     }
 
     @media (max-width: 900px) {
-      .hero { padding: 7.5rem 0 4.5rem; }
+      .hero { padding: 9rem 0 4.5rem; }
       .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
       .mock { transform: none; }
     }
@@ -1362,6 +1408,15 @@
   </style>
 </head>
 <body>
+
+  <!-- ============================ Migration Banner ============================ -->
+  <div class="migration-banner" role="banner">
+    <span><strong>CleverTender</strong> ist jetzt <strong>Silonio</strong> &mdash; besuche unsere neue Plattform.</span>
+    <a href="https://www.silonio.com" class="banner-btn" target="_blank" rel="noopener noreferrer">
+      Zu Silonio
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
 
   <!-- ============================ Header ============================ -->
   <header class="site-header">
